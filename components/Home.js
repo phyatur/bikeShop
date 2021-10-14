@@ -1,8 +1,10 @@
 import React from "react";
 import { StyleSheet, View, Image, Text, TouchableOpacity } from "react-native";
-import { Ionicons, FontAwesome, SimpleLineIcons, AntDesign, MaterialCommunityIcons} from '@expo/vector-icons'
+import { Ionicons, FontAwesome, SimpleLineIcons, AntDesign, MaterialCommunityIcons, MaterialIcons } from '@expo/vector-icons'
+import CartList from "./CartList";
 
-export default function Home (params)  {
+
+export default function Home ({navigation})  {
     return(
             <View style={{flex: 1, backgroundColor:'white'}}>
                 
@@ -65,25 +67,29 @@ export default function Home (params)  {
                             </TouchableOpacity>
                     </View>
 
-                    <View style={{padding: 20,}}>
-                        <TouchableOpacity>
-                            <View style={{backgroundColor: '#e3e3e3', borderRadius: 20 ,height: 250, width: 150, alignItems: "center"}}>
 
-                                {/* <View>
-                                    <View style={{backgroundColor:'white', width:30, height: 30, borderRadius: '50%',}}>
-                                    <MaterialIcons name="favorite-border" size={24} color="orange" />
-                                    </View>
-                                </View> */}
+                    <View style={{padding: 20, flexDirection: "row", flexWrap: "wrap", justifyContent: "space-around"}}>
+                        {/* 1st Card */}
+                        <TouchableOpacity>
+                            <View style={{backgroundColor: '#e3e3e3', borderRadius: 20 ,height: 250, width: 170, alignItems: "center", marginBottom: 25,}}>
+
+                                
 
                                 <View>
-                                    <Image style={{height: 150, width: 120, marginTop: 15, }} source={{uri: 'https://e7.pngegg.com/pngimages/480/95/png-clipart-city-bicycle-single-speed-bicycle-road-bicycle-gear-bicycle-bicycle-frame-city.png'} } />
+                                    <Image style={{height: 150, width: 140, marginTop: 18, borderRadius: 20,  position: "relative"}} source={{uri: "https://m.media-amazon.com/images/I/81wGn2TQJeL._SX425_.jpg"}}/>
+                                </View>
+
+                                <View>
+                                    <View style={{position: "absolute", right: -60, top: -140,}}>
+                                    <MaterialIcons name="favorite-border" size={24} color="orange" />
+                                    </View>
                                 </View>
                             
 
-                            <View style={{flexDirection: "column", alignItems: "center",marginTop: 30, }}>
+                            <View style={{flexDirection: "column", alignItems: "center",marginTop: 25, }}>
                                 <View>
                                     <Text style={{fontSize: 20, fontWeight: '400', color:'rgba(0,0,0,0.4)',}}>
-                                        Pinerollo Bike
+                                        Pinarollo Bike
                                     </Text>
                                 </View>
                                 <View>
@@ -95,11 +101,110 @@ export default function Home (params)  {
                         </View>
                             
                         </TouchableOpacity>
+                        {/* 2nd Card */}
+                        <TouchableOpacity>
+                            <View style={{backgroundColor: '#e3e3e3', borderRadius: 20 ,height: 250, width: 170, alignItems: "center", marginBottom: 25,}}>
+
+                                
+
+                                <View>
+                                    <Image style={{height: 150, width: 140, marginTop: 18, borderRadius: 20,  position: "relative"}} source={{uri: "https://m.media-amazon.com/images/I/81wGn2TQJeL._SX425_.jpg"}}/>
+                                </View>
+
+                                <View>
+                                    <View style={{position: "absolute", right: -60, top: -140,}}>
+                                    <MaterialIcons name="favorite-border" size={24} color="#e3e3e3" />
+                                    </View>
+                                </View>
+                            
+
+                            <View style={{flexDirection: "column", alignItems: "center",marginTop: 25, }}>
+                                <View>
+                                    <Text style={{fontSize: 20, fontWeight: '400', color:'rgba(0,0,0,0.4)',}}>
+                                        Brompton Bike
+                                    </Text>
+                                </View>
+                                <View>
+                                    <Text style={{fontSize: 20, fontWeight: '700',}}>
+                                        <Text style={{color: 'orange',}}>$ </Text>1,500.00
+                                    </Text>
+                                </View>
+                            </View>
+                        </View>
+                            
+                        </TouchableOpacity>
+                        {/* 3rd Card */}
+                        <TouchableOpacity>
+                            <View style={{backgroundColor: '#e3e3e3', borderRadius: 20 ,height: 250, width: 170, alignItems: "center", marginBottom: 25,}}>
+
+                                
+
+                                <View>
+                                    <Image style={{height: 150, width: 140, marginTop: 18, borderRadius: 20,  position: "relative"}} source={{uri: "https://m.media-amazon.com/images/I/81wGn2TQJeL._SX425_.jpg"}}/>
+                                </View>
+
+                                <View>
+                                    <View style={{position: "absolute", right: -60, top: -140,}}>
+                                    <MaterialIcons name="favorite-border" size={24} color="#e3e3e3" />
+                                    </View>
+                                </View>
+                            
+
+                            <View style={{flexDirection: "column", alignItems: "center",marginTop: 25, }}>
+                                <View>
+                                    <Text style={{fontSize: 20, fontWeight: '400', color:'rgba(0,0,0,0.4)',}}>
+                                        Schwinn Bike
+                                    </Text>
+                                </View>
+                                <View>
+                                    <Text style={{fontSize: 20, fontWeight: '700',}}>
+                                        <Text style={{color: 'orange',}}>$ </Text>1,200.00
+                                    </Text>
+                                </View>
+                            </View>
+                        </View>
+                            
+                        </TouchableOpacity>
+                        {/* 4th Card */}
+                        <TouchableOpacity>
+                            <View style={{backgroundColor: '#e3e3e3', borderRadius: 20 ,height: 250, width: 170, alignItems: "center", marginBottom: 25,}}>
+
+                                
+
+                                <View>
+                                    <Image style={{height: 150, width: 140, marginTop: 18, borderRadius: 20,  position: "relative"}} source={{uri: "https://m.media-amazon.com/images/I/81wGn2TQJeL._SX425_.jpg"}}/>
+                                </View>
+
+                                <View>
+                                    <View style={{position: "absolute", right: -60, top: -140,}}>
+                                    <MaterialIcons name="favorite-border" size={24} color="#e3e3e3" />
+                                    </View>
+                                </View>
+                            
+
+                            <View style={{flexDirection: "column", alignItems: "center",marginTop: 25, }}>
+                                <View>
+                                    <Text style={{fontSize: 20, fontWeight: '400', color:'rgba(0,0,0,0.4)',}}>
+                                        Norco Bike
+                                    </Text>
+                                </View>
+                                <View>
+                                    <Text style={{fontSize: 20, fontWeight: '700',}}>
+                                        <Text style={{color: 'orange',}}>$ </Text>980.00
+                                    </Text>
+                                </View>
+                            </View>
+                        </View>
+                            
+                        </TouchableOpacity>
+                        
+
                     </View>
                     
 
                     {/*  for nav */}
-                    <View style={{backgroundColor: '#e3e3e3', width:'100%', height: 80, flexDirection: "row", alignItems: "center", justifyContent: "space-around"}}>
+                    
+                        <View style={{backgroundColor: '#e3e3e3', width:'100%', height: 80, flexDirection: "row", alignItems: "center", justifyContent: "space-around",}}>
                         <TouchableOpacity>
                             <View>
                             <Ionicons name="home" size={24} color="orange" />
@@ -107,7 +212,7 @@ export default function Home (params)  {
                         </TouchableOpacity>
 
                         
-                            <View style={{backgroundColor: 'black', width: 70, height: 70, borderRadius: '50%', borderColor: 'white', borderWidth: 7, marginBottom: 80, }}>
+                            <View style={{backgroundColor: 'black', width: 70, height: 70, borderRadius: '50%', borderColor: '#f2f2f2', borderWidth: 7, marginBottom: 80, }}>
 
                         <TouchableOpacity>
                             <View style={{padding: 13,}}><MaterialCommunityIcons name="microphone-outline" size={32} color="white" /></View>
@@ -115,16 +220,16 @@ export default function Home (params)  {
 
                     </View>
 
-                        <TouchableOpacity>
+                        <TouchableOpacity onPress={() => { navigation.navigate('CartList')}}>
                         <View>
                         <SimpleLineIcons name="handbag" size={24} color="rgba(0,0,0,0.4)" />
                         </View>
                         </TouchableOpacity>
-                        
+
                     </View >
                     
 
-
+                    
                 </View>
 
                     

@@ -1,7 +1,7 @@
 import React from "react";
 import { StyleSheet, View, Image, Text } from "react-native";
 import { TouchableOpacity } from "react-native-gesture-handler";
-import { AntDesign } from "@expo/vector-icons";
+import { AntDesign, MaterialCommunityIcons } from "@expo/vector-icons";
 import Home from "./Home";
 
 
@@ -84,10 +84,13 @@ const style = StyleSheet.create({
 
     },
     signup:{
-        marginTop: 15.
+        marginTop: 15,
+        
+        
     },
     signUp1:{
-
+    color: '#e3e3e3',
+    fontSize: 18, 
     },
     signUp2:{
         color: 'orange'
