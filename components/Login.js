@@ -8,7 +8,7 @@ import Home from "./Home";
 export default function Login ({navigation})  {
     return(
             <View style={style.container}>
-                    <Image style={style.img} source={{url: "https://images.unsplash.com/photo-1559348349-86f1f65817fe?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTl8fGJpY3ljbGV8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"}} />
+                    <Image style={style.img} source={{uri: "https://images.unsplash.com/photo-1559348349-86f1f65817fe?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTl8fGJpY3ljbGV8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"}} />
 
                 <Text style={style.text}> Welcome to </Text>
                 <Text style={style.textUnder}> Reefy Bike Shop </Text>
@@ -17,7 +17,7 @@ export default function Login ({navigation})  {
                         
                 <Text style={style.login}>Login With Gmail</Text></TouchableOpacity>
                 <TouchableOpacity style={style.touchbtn1}>  
-<AntDesign name="apple1" size={24} color="white" /> 
+                <AntDesign name="apple1" size={24} color="white" /> 
                 <Text style={style.login1}>Login With Apple </Text></TouchableOpacity>
             <TouchableOpacity onPress={() => { navigation.navigate('Home')}} style={style.signup}>
                 <Text style={style.signUp1}>Not a member? <Text style={style.signUp2}>Signup</Text></Text>
@@ -45,7 +45,7 @@ const style = StyleSheet.create({
         marginBottom: 50
     },
     text: {
-    color: 'rgba(0,0,0,0.6)',
+    color: 'rgba(0,0,0,0.4)',
     fontSize: 24
     },
     textUnder:{
@@ -61,6 +61,7 @@ const style = StyleSheet.create({
         borderRadius: 9,
         marginBottom: 10,
         flexDirection: "row",
+        alignItems: "center",
     },
     login: {
         fontSize: 25,
@@ -73,6 +74,7 @@ const style = StyleSheet.create({
         paddingHorizontal: 60,
         borderRadius: 9,
         flexDirection: "row",
+        alignItems: "center",
     },
     login1: {
         fontSize:25,
